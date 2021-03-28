@@ -19,11 +19,11 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get("adamhh.com/api", (req, res, next) => {
+app.get("/api", (req, res, next) => {
     res.send('API Status: A-Okay');
 });
 
-app.post("adamhh.com/api/email", (req, res, next) => {
+app.post("/api/email", (req, res, next) => {
     sendGrid.setApiKey(process.env.API_KEY);
     const msg = {
         to:"adamhhall93+website@gmail.com",
