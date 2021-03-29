@@ -857,6 +857,13 @@ picomatch@^2.0.4, picomatch@^2.2.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
 
+postmark@^2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/postmark/-/postmark-2.7.3.tgz#e699dd52794cbca8a0d22b9bdcf472fe4e5f9dbc"
+  integrity sha512-YQ6mngTBmX9x/s9E5cE2K8JwOeMNI2yfNlLLRdtM+WyxyrLJ8CuIqDRGa5hyngd7+P4bH34mKuy2CHeci8ViOQ==
+  dependencies:
+    axios "^0.21.1"
+
 prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
