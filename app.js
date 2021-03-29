@@ -35,7 +35,7 @@ app.post("/api/email", (req, res, next) => {
         "From": "personalsiteinquiry@gmail.com",
         "To": "adamhhall93@gmail.com",
         "Subject": "Website Inquiry From: " + req.body.email,
-        "TextBody": "req.body.message"
+        "TextBody": req.body.message
     }).then(r  => {
         res.status(200).json({
             success:true
