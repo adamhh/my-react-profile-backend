@@ -27,7 +27,12 @@ app.post("/api/email", (req, res, next) => {
     const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
         "From": "ahall25@mail.greenriver.edu",
+        "To": "ahall25@mail.greenriver.edu",
         "Name": "Adam Hall",
+        "Subject": "Hello from postmark",
+        "HtmlBody": "Hello",
+        "TextBody": "Hello from postmark2",
+        "MessageStream":"outbound"
     }).then(r  => {
         res.status(200).json({
             success:true
