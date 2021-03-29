@@ -29,9 +29,8 @@ app.post("/api/email", (req, res, next) => {
         "From": "ahall25@mail.greenriver.edu",
         "To": "ahall25@mail.greenriver.edu",
         "Name": "Adam Hall",
-        "Subject": "Hello from postmark",
-        "HtmlBody": "Hello",
-        "TextBody": "Hello from postmark2",
+        "Subject": "Personal Website Inquiry",
+        "TextBody": "From: " + req.body.name + " at: " + req.body.email + ". Message: " +req.body.message,
         "MessageStream":"Notifications"
     }).then(r  => {
         res.status(200).json({
