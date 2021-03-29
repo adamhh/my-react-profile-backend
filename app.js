@@ -46,9 +46,7 @@ app.post("/api/email", (req, res, next) => {
         })
 });
 
-
-app.set('port', (process.env.PORT || 5000));
-
-app.listen(app.get('port'), function() {
-    console.log('Node server is running on port' + app.get('port'))
+let port = Number(process.env.PORT || 80);
+app.listen(port, function() {
+    console.log("listening on port " + port);
 });
