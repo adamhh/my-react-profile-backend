@@ -26,8 +26,9 @@ app.get("/api", (req, res, next) => {
 app.post("/api/email", (req, res, next) => {
     const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
-        "From": "sender@example.com",
-        "To": "recipient@example.com",
+        "From": "ahall25@mail.greenriver.edu",
+        "Name": "Adam Hall",
+        "To": "ahall25@mail.greenriver.edu",
         "Subject": "Test",
         "TextBody": "Hello from Postmark!"
     }).then(r  => {
