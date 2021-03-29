@@ -27,7 +27,7 @@ app.post("/api/email", (req, res, next) => {
     const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
         "From": "ahall25@mail.greenriver.edu",
-        "To": "hgreen@mail.greenriver.edu",
+        "To": "ahall25@mail.greenriver.edu",
         "Name": "Adam Hall",
         "Subject": "Hello from postmark",
         "HtmlBody": "Hello",
@@ -41,10 +41,10 @@ app.post("/api/email", (req, res, next) => {
         .catch(error => {
             console.log("error", error);
             res.status(401).json({
-                success:false
+                success:falsey
             });
         })
 });
 
 
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 3000)
