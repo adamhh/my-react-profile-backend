@@ -26,7 +26,7 @@ app.get("/api", (req, res, next) => {
 app.post("/api/email", (req, res, next) => {
     const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
-        "From": "personalsiteinquiry@gmail.com",
+        "From": "ahall25@mail.greenriver.edu",
         "To": "adamhhall93@gmail.com",
         "Subject": "Website Inquiry From: " + req.body.email,
         "TextBody": req.body.message
