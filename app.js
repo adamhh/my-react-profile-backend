@@ -31,7 +31,6 @@ app.post("/api/email", (req, res, next) => {
         subject: "Website Inquiry From:   " + req.body.email,
         text: req.body.message
     }
-    console.log(process.env.API_KEY);
 
     sendGrid.send(msg)
         .then(result => {
