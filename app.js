@@ -24,7 +24,7 @@ app.get("/api", (req, res, next) => {
 });
 
 app.post("/api/email", (req, res, next) => {
-    const client = new postMark.Client("04a301b7-e44f-409f-968b-4941747a7fa2");
+    const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
         "From": "ahall25@mail.greenriver.edu",
         "To": "ahall25@mail.greenriver.edu",
