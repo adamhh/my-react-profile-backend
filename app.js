@@ -32,7 +32,7 @@ app.post("/api/email", (req, res, next) => {
         "Subject": "Hello from postmark",
         "HtmlBody": "Hello",
         "TextBody": "Hello from postmark2",
-        "MessageStream":"outbound"
+        "MessageStream":"Inbound"
     }).then(r  => {
         res.status(200).json({
             success:true
