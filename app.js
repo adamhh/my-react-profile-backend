@@ -28,9 +28,6 @@ app.post("/api/email", (req, res, next) => {
     client.sendEmail({
         "From": "ahall25@mail.greenriver.edu",
         "Name": "Adam Hall",
-        "To": "ahall25@mail.greenriver.edu",
-        "Subject": "Test",
-        "TextBody": "Hello from Postmark!"
     }).then(r  => {
         res.status(200).json({
             success:true
