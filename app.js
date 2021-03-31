@@ -53,7 +53,7 @@ app.post("/api/email/bella", (req, res, next) => {
         "Name": "Adam Hall",
         "Subject": "Personal Website Inquiry",
         "TextBody": "From: " + req.body.email,
-        "MessageStream":"Notifications"
+        "MessageStream":"bella"
     }).then(r  => {
         res.status(200).json({
             success:true
