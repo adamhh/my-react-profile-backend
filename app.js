@@ -49,7 +49,7 @@ app.post("/api/email/bella", (req, res, next) => {
     const client = new postMark.Client(process.env.API_KEY);
     client.sendEmail({
         "From": "ahall25@mail.greenriver.edu",
-        "To": "ahall25@mail.greenriver.edu",
+        "To": "info@bellaprivata.com",
         "Name": "Adam Hall",
         "Subject": "Personal Website Inquiry",
         "TextBody": "From: " + req.body.email,
