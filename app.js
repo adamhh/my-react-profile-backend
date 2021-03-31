@@ -45,6 +45,28 @@ app.post("/api/email", (req, res, next) => {
         })
 });
 
+app.post("/api/email/bella", (req, res, next) => {
+    const client = new postMark.Client(process.env.API_KEY);
+    client.sendEmail({
+        "From": "ahall25@mail.greenriver.edu",
+        "To": "ahall25@mail.greenriver.edu",
+        "Name": "Adam Hall",
+        "Subject": "Personal Website Inquiry",
+        "TextBody": "From: " + req.body.email,
+        "MessageStream":"Notifications"
+    }).then(r  => {
+        res.status(200).json({
+            success:true
+        });
+    })
+        .catch(error => {
+            console.log("error", error);
+            res.status(401).json({
+                success:false
+            });
+        })
+});
+
 let port = Number(process.env.PORT || 80);
 app.listen(port, function() {
     console.log("listening on port " + port);
