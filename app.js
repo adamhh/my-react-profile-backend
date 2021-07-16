@@ -52,7 +52,7 @@ app.post("/api/email/bella", (req, res, next) => {
         "To": "info@bellaprivata.com",
         "Name": "Adam Hall",
         "Subject": "Personal Website Inquiry",
-        "TextBody": "From: " + req.body.name + "Phone number:" + req.body.phone +  " at: " + req.body.email + ". Message: " +req.body.message,
+        "TextBody": "From: " + req.body.name + " ---- " + "Phone number:" + req.body.phone + " ---- " + " at: " + req.body.email + " ---- " + ". Message: " +req.body.message,
         "MessageStream":"bella"
     }).then(r  => {
         res.status(200).json({
