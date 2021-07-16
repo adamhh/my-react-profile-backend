@@ -30,7 +30,7 @@ app.post("/api/email/", (req, res, next) => {
         "To": "ahall25@mail.greenriver.edu",
         "Name": "Adam Hall",
         "Subject": "Personal Website Inquiry",
-        "TextBody": "From: " + req.body.name + " at: " + req.body.email + ". Message: " +req.body.message,
+        "TextBody": "From: " + req.body.name + "Phone number:" + req.body.phone +  " at: " + req.body.email + ". Message: " +req.body.message,
         "MessageStream":"Notifications"
     }).then(r  => {
         res.status(200).json({
